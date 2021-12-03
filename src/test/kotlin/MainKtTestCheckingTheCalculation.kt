@@ -9,7 +9,7 @@ class MainKtTestCheckingTheCalculation {
         var myAmmountCurrentTransfer =  45000.00
         var myAmountOfPreviousTransfers = 85000.00
         var myPaymentSystem = "Visa"
-        var expectedCommission = 270.00
+        var expectedCommission = 300.00
         var actualCommission = calculateСommission(myAmmountCurrentTransfer, myAmountOfPreviousTransfers, myPaymentSystem)
         assertEquals(expectedCommission, actualCommission, 0.00)
 
