@@ -2,9 +2,9 @@
 fun main() {
     println(calculateСommission(45000.00))
     println(calculateСommission(85000.00))
-    println(calculateСommission(65000.00, 15000.00, "Mastercard"))
-    println(calculateСommission(65000.00, 85000.00, "Mastercard"))
-    println(calculateСommission(45000.00, 85000.00, "Visa"))
+    println(calculateСommission(65000.00, 15000.00, "Mastercard")) //
+    println(calculateСommission(65000.00, 85000.00, "Mastercard")) //
+    println(calculateСommission(45000.00, 85000.00, "Visa")) //
     println(calculateСommission(1000.00, 85000.00, "Visa"))
 }
 
