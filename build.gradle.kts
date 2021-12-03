@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.5.10"
+    jacoco
 }
 
 group = "ru.netology"
@@ -12,7 +13,9 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
+    testImplementation(kotlin("test"));
+    testImplementation("junit:junit:4.13.2")
+    implementation("junit:junit:4.12")
 }
 
 tasks.test {

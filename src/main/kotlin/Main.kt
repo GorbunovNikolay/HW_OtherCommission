@@ -26,3 +26,5 @@ fun calculateСommission(amountСurrentTransfer: Double, amountOfPreviousTransfe
     }
     return result
 }
+
+
