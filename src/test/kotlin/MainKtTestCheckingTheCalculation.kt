@@ -5,51 +5,58 @@ import org.junit.Assert.*
 class MainKtTestCheckingTheCalculation {
 
     @Test
-    fun theCalculationCommission() {
-        var myAmmountCurrentTransfer =  45000.00
-        var myAmountOfPreviousTransfers = 85000.00
-        var myPaymentSystem = "Visa"
-        var expectedCommission = 300.00
-        var actualCommission = calculateСommission(myAmmountCurrentTransfer, myAmountOfPreviousTransfers, myPaymentSystem)
+    fun theCalculationCommission4585() {
+        val myAmmountCurrentTransfer =  45000.00
+        val myAmountOfPreviousTransfers = 85000.00
+        val myPaymentSystem = "Visa"
+        val expectedCommission = 270.00
+        val actualCommission = calculateCommission(myAmmountCurrentTransfer, myAmountOfPreviousTransfers, myPaymentSystem)
         assertEquals(expectedCommission, actualCommission, 0.00)
+    }
 
-        myAmmountCurrentTransfer =  65000.00
-        myAmountOfPreviousTransfers = 85000.00
-        myPaymentSystem = "Mastercard"
-        expectedCommission = 410.00
-        actualCommission = calculateСommission(myAmmountCurrentTransfer, myAmountOfPreviousTransfers, myPaymentSystem)
+    @Test
+    fun theCalculationCommission6585() {
+        val myAmmountCurrentTransfer = 65000.00
+        val myAmountOfPreviousTransfers = 85000.00
+        val myPaymentSystem = "Mastercard"
+        val expectedCommission = 410.00
+        val actualCommission = calculateCommission(myAmmountCurrentTransfer, myAmountOfPreviousTransfers, myPaymentSystem)
         assertEquals(expectedCommission, actualCommission, 0.00)
+    }
 
-        myAmmountCurrentTransfer =  65000.00
-        myAmountOfPreviousTransfers = 15000.00
-        myPaymentSystem = "Maestro"
-        expectedCommission = 0.00
-        actualCommission = calculateСommission(myAmmountCurrentTransfer, myAmountOfPreviousTransfers, myPaymentSystem)
+    @Test
+    fun theCalculationCommission6515() {
+        val myAmmountCurrentTransfer = 65000.00
+        val myAmountOfPreviousTransfers = 15000.00
+        val myPaymentSystem = "Maestro"
+        val expectedCommission = 0.00
+        val actualCommission = calculateCommission(myAmmountCurrentTransfer, myAmountOfPreviousTransfers, myPaymentSystem)
         assertEquals(expectedCommission, actualCommission, 0.00)
+    }
 
-        myAmmountCurrentTransfer =  65000.00
-        myAmountOfPreviousTransfers = 15000.00
-        myPaymentSystem = "Maestro"
-        expectedCommission = 0.00
-        actualCommission = calculateСommission(myAmmountCurrentTransfer, myAmountOfPreviousTransfers, myPaymentSystem)
+    @Test
+    fun theCalculationCommission185() {
+        val myAmmountCurrentTransfer = 1000.00
+        val myAmountOfPreviousTransfers = 85000.00
+        val myPaymentSystem = "Visa"
+        val expectedCommission = 35.00
+        val actualCommission = calculateCommission(myAmmountCurrentTransfer, myAmountOfPreviousTransfers, myPaymentSystem)
         assertEquals(expectedCommission, actualCommission, 0.00)
+    }
 
-        myAmmountCurrentTransfer =  1000.00
-        myAmountOfPreviousTransfers = 85000.00
-        myPaymentSystem = "Visa"
-        expectedCommission = 35.00
-        actualCommission = calculateСommission(myAmmountCurrentTransfer, myAmountOfPreviousTransfers, myPaymentSystem)
+    @Test
+    fun theCalculationCommission450() {
+        val myAmmountCurrentTransfer = 45000.00
+        val expectedCommission = 0.00
+        val actualCommission = calculateCommission(myAmmountCurrentTransfer)
         assertEquals(expectedCommission, actualCommission, 0.00)
+    }
 
-        myAmmountCurrentTransfer =  45000.00
-        expectedCommission = 0.00
-        actualCommission = calculateСommission(myAmmountCurrentTransfer)
+    @Test
+    fun theCalculationCommission850() {
+        val myAmmountCurrentTransfer =  85000.00
+        val expectedCommission = 0.00
+        val actualCommission = calculateCommission(myAmmountCurrentTransfer)
         assertEquals(expectedCommission, actualCommission, 0.00)
-
-        myAmmountCurrentTransfer =  85000.00
-        expectedCommission = 0.00
-        actualCommission = calculateСommission(myAmmountCurrentTransfer)
-        assertEquals(expectedCommission, actualCommission, 0.00)
-
     }
 }
